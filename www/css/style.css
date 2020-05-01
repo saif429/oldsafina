@@ -1,0 +1,318 @@
+/* Empty. Add your own CSS if you like */
+h1,h2,h3,h4,h5,span,p,b{
+    font-family: "San Francisco";
+}
+.tab-nav.tabs {
+    padding-top: 10px;
+    background-color: #3a0d46 !important
+}
+.title.title-center.header-item {
+    color: white !important;
+    left: 37px;
+    right: 37px;
+}
+i.icon.ion-chevron-left {
+  color: white !important;
+}
+ion-header-bar.bar-stable.bar.bar-header {
+    background-color: #3a0d46 !important;
+    color: white !important;
+}
+ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated {
+    color: #ffffff;
+}
+ion-tabs.tabs-color-active-positive .tab-item {
+    color: #fff;
+}
+.clear{clear:both !important;height: 10px;}
+.icon_size{
+  font-size: 24px;
+  z-index: 99999999;
+  color: #ffffff;
+  width: 50px;
+  overflow: hidden;
+  padding: 13px 19px;
+  background-color: #3a0d46;
+  border-radius: 100%;
+  display: -webkit-inline-box;
+  height: 50px;
+}
+.home_section{
+    /* height: 81px; */
+    background-color: white;
+    margin-top: -23px;
+    width: 100%;
+    /* margin-left: 8px; */
+    padding-top: 15px;
+    text-align: center;
+}
+.image_box {
+  height: 150px;
+  width: 96.5%;
+  background-size: cover;
+  background-position: center bottom;
+  margin: 0 7px;
+}
+.articale_bg {
+  background: #fff;
+  border-color: #fff;
+}
+.section_title{
+    color: #bdbabd;
+}
+.home_section_img {
+    /* height: 85px; */
+    width: 100%;
+}
+.banner_icon {
+  font-size: 60px;
+  color: #3a0d46;
+  /* padding: 0 47%; */
+}
+.icon_margin {
+  margin: 10px auto;
+}
+.text_style {
+  font-weight: 400;
+  color: #676767;
+}
+#seasion1 {
+  padding-right: 2px;
+}
+#seasion2 {
+  padding-left: 2px;
+}
+.artical_img_avt{
+  position: absolute !important;
+    top: 6px !important;
+    left: 6px !important;
+    max-width: 70px !important;
+    max-height: 70px !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+}
+.active_pod_menu{
+  color: black;
+}
+span.previous-title {
+  display: none !important;
+}
+i.icon.ion-ios-arrow-back {
+  color: white;
+}
+.articel_section img{
+  width: 100%;
+  height: 60px;
+}
+.articel_section {
+  margin-top: 10px;
+}
+.play_icon{
+  width: 13% !important;
+  height: auto !important;
+  margin: 0 40% !important;
+  margin-top: -30px !important;
+}
+.music_bar {
+  background-color: #3a0d46;
+  height: 2px;
+}
+.single_podcast {
+  padding: 0 18px;
+  background-color: #fcfcfc;
+  margin-top: 0%;
+}
+.prog_icon {
+  height: 15px;
+  width: 15px;
+  background-color: #989898;
+  border-radius: 15px;
+  margin-top: -10px;
+}
+/* .item-complex.item-icon-right .item-content {
+  padding-right: 20px !important;
+} */
+/* .right_text{ */
+  /* background-color: transparent !important; */
+
+/* } */
+.youtube_single_articale {
+  background-color: white;
+  padding: 10px;
+}
+.control_button{
+  display: none !important;
+}
+.single_articel_section {
+  margin-top: 28px;
+  background-color: white;
+  /* padding: 10px; */
+}
+.single_articel_section img {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+}
+.single_articel_section h4 {
+  font-family: "San Francisco";
+  text-align: center;
+  font-size: 22px;
+}
+.blog_content img {
+  display: none;
+}
+.socal_option{
+  margin-left: -20px;
+}
+img.event_img_avt {
+  width: 100%;
+  height: auto;
+}
+.event_img{
+  width: 100%;
+  height: auto;
+  padding: 5px;
+}
+.home_a{
+  border-style: none;
+}
+.home_a a{
+  padding: 5px 0 0 0 !important;
+}
+.paragraph {
+  font-family: 'Lora';
+  font-size: 15px;
+  padding: 0 10px;
+  margin-top: 25px;
+  color: #333333;
+}
+.socal_option{
+  margin-left: -20px;
+}
+.bms-right-icon{
+  position: relative;
+  right: 5px;
+  top: 3px;
+  font-size: 30px;
+}
+.about_section{
+  background-color: white;
+    margin-top: 15px;
+    width: 100%;
+    margin-left: 0px;
+    padding-top: 1px;
+    text-align: center;
+    padding: 0 4%;
+    padding-bottom: 20px;
+}
+#custom-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  /* background-color: #fe201f; */
+  background-image: url('../img/splash.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#myProgress {
+  width: 60%;
+    background-color: #000;
+    margin-top: 56.5%;
+    /* margin: 0 68px; */
+    margin-left: 20%;
+}
+#myBar {
+  width: 1%;
+  height: 2px;
+  background-color: #c600ff;
+}
+.icon_aboutus{
+      /* margin-left: -15px; */
+      font-size: 18px;
+      /* margin-right: 2px; */
+      padding-right: 3px;
+}
+.row.tel_about span {
+  font-size: 12px;
+}
+.searchbox{
+  width: 95% !important;
+  /* margin: 0 -30px 0 10px; */
+  border-radius: 159px !important;
+  height: 20px !important;
+  margin-left: 8px !important;
+  text-align: center;
+}
+.icon_center {
+  text-align: center;
+}
+.row.tel_about {
+  margin: auto;
+  text-align: center;
+  display: block;
+}
+.platform-android5 a.item-content {
+  padding-left: 24%;
+}
+.event_img_a a{
+  padding: 7px 7px 3px 7px !important;
+}
+audio {
+  /* background: #000; */
+  width: 100%;
+  max-width: 110.5%;
+  /* margin-left: -19px; */
+}
+.card i {
+  color: #3a0d46;
+}
+
+.scroll-content {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;}
+
+.selectable {
+  -webkit-user-select: auto;
+}
+.pane{
+  overflow-y: scroll !important;
+}
+@media screen and (max-width:1170px){
+  .item-avatar, .item-avatar .item-content, .item-avatar-left, .item-avatar-left .item-content {
+  padding-left: 14% ;
+  }
+}
+@media screen and (max-width:630px){
+  .item-avatar, .item-avatar .item-content, .item-avatar-left, .item-avatar-left .item-content {
+  padding-left: 20% ;
+}
+}
+@media screen and (max-width:480px){
+  .item-avatar, .item-avatar .item-content, .item-avatar-left, .item-avatar-left .item-content {
+  padding-left: 25% ;
+}	
+}
+@media screen and (max-width:320px){
+  .item-avatar, .item-avatar .item-content, .item-avatar-left, .item-avatar-left .item-content {
+  padding-left: 28% ;
+}}
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 100;
+  src: url(../font/SF-Pro-Text-Regular.otf);
+}
+@font-face {
+  font-family: "Lora";
+  font-weight: 100;
+  src: url(../font/Lora-Regular.ttf);
+}
