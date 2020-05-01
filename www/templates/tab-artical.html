@@ -1,0 +1,18 @@
+<ion-view view-title="ARTICLES">
+    <ion-content style="background-color: #eeeeee;">
+        <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+        <div class="clear" ng-init="getAllArtical()"></div>
+        <input type = "search" class="searchbox" placeholder="Search" ng-model="searchartical"/>
+        <div class="icon_center icon_margin"><i class="icon ion-ios-paper-outline banner_icon"></i></div>
+        <!-- <div class="clear"></div> -->
+        <!-- Start Articales from feed -->
+        <ion-list>
+            <ion-item class="item-remove-animate item-avatar item-icon-right articale_bg" ng-repeat="apiartical in apiarticals | filter:searchartical" type="item-text-wrap" href="#/tab/artical/{{apiartical.$$hashKey}}" ng-click="singleArtical(apiartical)" style="margin-bottom: 3px;margin-left: 5px;margin-right: 5px;">
+                <img ng-src="{{apiartical.thumbnail}}" err-src="{{myDefaultImage}}" class="artical_img_avt">
+                <h4 class="artical_title text_style" style="font-size: 14px;text-transform: uppercase;color:#000000"><b>{{apiartical.title | ampersand}}</b></h4>
+                <h6 class="text_style" ng-bind="formatDate(apiartical.pubDate) | date"></h6>
+                <h6 style="font-size: 12px;" class="text_style">{{apiartical.description | short}}</h6>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

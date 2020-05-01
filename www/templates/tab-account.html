@@ -1,0 +1,14 @@
+<ion-view view-title="EVENTS">
+  <ion-content class="padding" style="background-color: #eeeeee;">
+      <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+      <div ng-init="upcomeingevents()"></div>
+      <!-- <input type = "search" class="searchbox" placeholder="Search" ng-model="searchyoutube"/> -->
+      <div class="icon_center icon_margin" style="margin: 10px auto 14px;"><i class="icon ion-ios-calendar-outline banner_icon"></i></div>
+      <!-- <div class="clear"></div> -->
+      <ion-list>
+        <ion-item class="item-remove-animate item-icon-right articale_bg event_img_a" ng-repeat="enents_data in enents_datas | filter:searchartical" type="item-text-wrap" href="#/tab/account/{{enents_data.$$hashKey}}" ng-click="singleEvent(enents_data)" style="margin-bottom: 3px;margin-left: 5px;margin-right: 5px;">
+            <img ng-src="{{enents_data.image_url}}" err-src="{{myDefaultImage}}" class="event_img_avt">
+        </ion-item>
+      </ion-list>
+  </ion-content>
+</ion-view>

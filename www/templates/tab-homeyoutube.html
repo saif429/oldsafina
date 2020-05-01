@@ -1,0 +1,40 @@
+<ion-view view-title="YOUTUBE">
+    <ion-content class="padding" style="background-color: #eeeeee;">
+        <div class="clear"></div>
+        <div class="icon_center icon_margin"><i class="icon ion-ios-play-outline banner_icon"></i></div>
+        <div class="clear"></div>
+        <div class="youtube_single_articale selectable">
+            <iframe id="home_youtube" width="100%" height="300px" ng-src="{{getIframeSrc(home_video.id.videoId)}}" frameborder="0" allowfullscreen></iframe>
+            <div class = "button-block aricale">
+                <div class="clear"></div>
+                <h3 style="font-size: 18px;text-align: center;" class="text_style">{{home_video.snippet.title | ampersand}}</h3>
+                <h5 style="text-align: center;" class="text_style">{{home_video.snippet.publishedAt | date}} | {{home_video.snippet.description}}</h5>
+                <div class="clear"></div>
+                <div class="card">
+                    <div class="item item-text-wrap row">
+                        <button ng-click="shareyoutubehome('w', home_video.snippet.title, '', home_video.id.videoId);"
+                                        class="button button-light col col-20">
+                            <i class="icon ion-social-whatsapp"></i>
+                        </button>
+                        <button ng-click="shareyoutubehome('f', home_video.snippet.title, '', home_video.id.videoId);"
+                                        class="button button-light col col-20">
+                            <i class="icon ion-social-facebook"></i>
+                        </button>
+                        <button ng-click="shareyoutubehome('t', home_video.snippet.title, '', home_video.id.videoId);"
+                                        class="button button-light col col-20">
+                            <i class="icon ion-social-twitter"></i>
+                        </button>  
+                        <button ng-click="shareyoutubehome('sms', home_video.snippet.title, '', home_video.id.videoId);"
+                                        class="button button-light col col-20">
+                            <i class="icon ion-android-textsms"></i>
+                        </button> 
+                        <button ng-click="shareyoutubehome('email', home_video.snippet.title, '', home_video.id.videoId);"
+                                        class="button button-light col col-20">
+                            <i class="icon ion-ios-email"></i>
+                        </button> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,42 @@
+<ion-view view-title="PODCAST">
+    <ion-content class="padding" style="background-color: #eeeeee;">
+        <div class="icon_center"><i class="icon ion-ios-mic-outline banner_icon"></i></div>
+        <!-- Start Articales from feed -->
+        <div class="articel_section selectable" style="margin-left: 10px;margin-right: 10px;background: #fafafa;">
+            <img src="img/avatars-000285408508-ih0xcy-original.jpg" alt="" style="width:100%;height: auto;">
+            <div class="single_podcast">
+                <audio controls id="home_audio" controlsList="nodownload">
+                    <source ng-src="{{trustSrc(audio.enclosure.link)}}">
+                </audio>
+                <h3 style="font-size:20px;text-align: center;" class="text_style"><b>{{audio.title | ampersand}}</b></h3>
+                <h4 style="font-size: 15px;text-align: center;" class="text_style">{{audio.content}}</h4>
+                <div class="clear"></div>
+                <div class="card">
+                    <div class="item item-text-wrap row">
+                        <button ng-click="sharehome('w', audio.title, '', audio.link);"
+                                        class="button button-light col col-20">
+                            <i class="icon ion-social-whatsapp"></i>
+                        </button>
+                        <button ng-click="sharehome('f', audio.title, '', audio.link);"
+                                        class="button button-light col col-20">
+                            <i class="icon ion-social-facebook"></i>
+                        </button>
+                        <button ng-click="sharehome('t', audio.title, '', audio.link);"
+                                        class="button button-light col col-20">
+                            <i class="icon ion-social-twitter"></i>
+                        </button>  
+                        <button ng-click="sharehome('sms', audio.title, '', audio.link);"
+                                        class="button button-light col col-20">
+                            <i class="icon ion-android-textsms"></i>
+                        </button> 
+                        <button ng-click="sharehome('email', audio.title, '', audio.link);"
+                                        class="button button-light col col-20">
+                            <i class="icon ion-ios-email"></i>
+                        </button> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+      

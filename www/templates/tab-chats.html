@@ -1,0 +1,46 @@
+<ion-view view-title="PODCAST">
+  <ion-content style="background-color: #eeeeee;">
+    <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+    <div class="clear" ng-init="getAllpodcast()"></div>
+    <input type = "search" class="searchbox" placeholder="Search" ng-model="podcastsearch" />
+    <!-- Start Articales from feed -->
+    <div class="icon_center icon_margin"><i class="icon ion-ios-mic-outline banner_icon"></i></div>
+    <center style="color: #949494;">
+      <span id="season1" ng-click="season1()">SEASON 1</span> | <span id="seasion2" ng-click="season2()">SEASON 2</span> | <span id="solo" ng-click="solo()">SOLO</span> | <span id="sota" ng-click="sota()">SOTA</span>
+    </center>
+    <ion-list>
+      <div class="articel_section" ng-show="season_1">
+        <ion-item class="item-remove-animate item-avatar item-icon-right articale_bg" ng-repeat="seasion1 in seasion1s | filter:podcastsearch" type="item-text-wrap" href="#/tab/chats/{{seasion1.$$hashKey}}" ng-click="singleaudio(seasion1)" style="margin-bottom: 3px;margin-left: 5px;margin-right: 5px;">
+          <img src="img/avatars-000285408508-ih0xcy-original.jpg" class="artical_img_avt">
+          <h4 class="artical_title text_style" style="font-size: 14px;text-transform: uppercase;color:#000000"><b>{{seasion1.title | ampersand}}</b></h4>
+          <h6 class="text_style" ng-bind="formatDate_podcast(seasion1.pubDate) | date"></h6>
+          <h6 class="text_style" style="font-size: 12px;">{{seasion1.description | short}}</h6>
+        </ion-item>
+      </div>
+      <div class="articel_section" ng-show="season_2">
+        <ion-item class="item-remove-animate item-avatar item-icon-right articale_bg" ng-repeat="seasion2 in seasion2s | filter:podcastsearch" type="item-text-wrap" href="#/tab/chats/{{seasion2.$$hashKey}}" style="margin-bottom: 3px;margin-left: 5px;margin-right: 5px;" ng-click="singleaudio(seasion2)">
+          <img src="img/avatars-000285408508-ih0xcy-original.jpg" class="artical_img_avt">
+          <h4 class="artical_title text_style" style="font-size: 14px;text-transform: uppercase;color:#000000"><b>{{seasion2.title | ampersand}}</b></h4>
+          <h6 class="text_style" ng-bind="formatDate_podcast(seasion2.pubDate) | date"></h6>
+          <h6 class="text_style" style="font-size: 12px;">{{seasion2.description | short}}</h6>
+        </ion-item>
+      </div>
+      <div class="articel_section" ng-show="solo_1">
+        <ion-item class="item-remove-animate item-avatar item-icon-right articale_bg" ng-repeat="solo in solos | filter:podcastsearch" type="item-text-wrap" href="#/tab/chats/{{solo.$$hashKey}}" style="margin-bottom: 3px;margin-left: 5px;margin-right: 5px;" ng-click="singleaudio(solo)">
+          <img src="img/avatars-000285408508-ih0xcy-original.jpg" class="artical_img_avt">
+          <h4 class="artical_title text_style" style="font-size: 14px;text-transform: uppercase;color:#000000"><b>{{solo.title | ampersand}}</b></h4>
+          <h6 class="text_style" ng-bind="formatDate_podcast(solo.pubDate) | date"></h6>
+          <h6 class="text_style" style="font-size: 12px;">{{solo.description | short}}</h6>
+        </ion-item>
+      </div>
+      <div class="articel_section" ng-show="sota_1">
+        <ion-item class="item-remove-animate item-avatar item-icon-right articale_bg" ng-repeat="sota in sotas | filter:podcastsearch" type="item-text-wrap" href="#/tab/chats/{{sota.$$hashKey}}" style="margin-bottom: 3px;margin-left: 5px;margin-right: 5px;" ng-click="singleaudio(sota)">
+          <img src="img/avatars-000285408508-ih0xcy-original.jpg" class="artical_img_avt">
+          <h4 class="artical_title text_style" style="font-size: 14px;text-transform: uppercase;color:#000000"><b>{{sota.title | ampersand}}</b></h4>
+          <h6 class="text_style" ng-bind="formatDate_podcast(sota.pubDate) | date"></h6>
+          <h6 class="text_style" style="font-size: 12px;">{{sota.description | short}}</h6>
+        </ion-item>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>

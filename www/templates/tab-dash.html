@@ -1,0 +1,62 @@
+<ion-view view-title="WHAT'S NEW">
+    <ion-nav-buttons side="right">
+        <i class="icon ion-ios-information-outline bms-right-icon" ng-click="aboutus()"></i>
+    </ion-nav-buttons>
+  <ion-content class="padding selectable" style="background-color: #eeeeee;">
+    <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+    <div class="clear" ng-init="getalldata()"></div>
+    <!-- Start Articale Section -->
+      <div class="clear"></div>
+      <div class="icon_center"><i class="icon ion-ios-paper icon_size" style="padding: 13px 16px;"></i></div>
+      <div class="home_section">
+            <ion-item class="item-remove-animate item-icon-right home_a right_text" type="item-text-wrap" style="padding: 0;" href="#/tab/dash/{{homeartical.$$hashKey}}" ng-click="goartical(homeartical)">
+                <h5 class="section_title" style="margin-top:5px;">ARTICLES</h5>
+                <h4 style="font-size: 15px;margin:5px;">{{homeartical.title | ampersand}}</h4>
+                <h5 class="section_title">{{formatDate_home(homeartical.pubDate) | date}}</h5>
+                <div class="image_box" style="background-image: url('{{homeartical.thumbnail}}');">
+                </div>
+            </ion-item>
+      </div>
+    <!-- End Articale Section -->
+    <!-- Start Podcast Section -->
+        <div class="clear"></div>
+        <div class="icon_center"><i class="icon ion-ios-mic icon_size"></i></div>
+        <div class="home_section">
+            <ion-item class="item-remove-animate item-icon-right home_a right_text" type="item-text-wrap" style="padding: 0;" href="#/tab/dash/{{homepodcast.$$hashKey}}" ng-click="gopodcast(homepodcast)">
+                <h6 class="section_title" style="margin-top:5px;">PODCAST</h6>
+                <h5 style="font-size: 15px;margin:5px;">{{homepodcast.title | ampersand}}</h5>
+                <h6 class="section_title" ng-bind="formatDate_home(homepodcast.pubDate) | date"></h6>
+                <div class="image_box" style="background-image: url('img/avatars-000285408508-ih0xcy-original.jpg');">
+                </div>
+            </ion-item>
+        </div>
+    <!-- End Podcast Section -->
+    <!-- Start Youtube Section -->
+        <div class="clear"></div>
+        <div class="icon_center"><i class="icon ion-ios-play icon_size" style="padding: 13px 20px;"></i></div>
+        <div class="home_section">
+            <ion-item class="item-remove-animate item-icon-right home_a right_text" type="item-text-wrap" style="padding: 0;" href="#/tab/dash/{{homevideos.$$hashKey}}" ng-click="goyoutube(homevideos)">
+                <h6 class="section_title" style="margin-top:5px;">YOUTUBE</h6>
+                <h5 style="font-size: 15px;margin:5px;">{{homevideos.snippet.title | ampersand}}</h5>
+                <h6 class="section_title">{{homevideos.snippet.publishedAt | date}}</h6>
+                <div class="image_box" style="background-image: url('{{homevideos.snippet.thumbnails.medium.url}}');">
+                </div>
+            </ion-item>
+        </div>
+    <!-- End Youtube Section -->
+    <!-- Start event Section -->
+        <div class="clear"></div>
+        <div class="icon_center"><i class="icon ion-ios-calendar icon_size" style="padding: 12px 16px;"></i></div>
+        <div class="home_section">
+            <ion-item class="item-remove-animate item-icon-right home_a right_text" type="item-text-wrap" style="padding: 0;" href="#/tab/dash/{{enents_datas_home.$$hashKey}}" ng-click="home_event(enents_datas_home)">
+                <h6 class="section_title" style="margin-top:5px;">EVENTS</h6>
+                <h5 style="font-size: 15px;margin:5px;">{{enents_datas_home.event_name | ampersand}}</h5>
+                <h6 class="section_title" ng-bind="formatDate_home(enents_datas_home.updated_at) | date"></h6>
+                <div class="image_box" style="background-image: url('{{enents_datas_home.image_url}}');">
+                </div>
+            </ion-item>
+        </div>
+    <!-- End event Section -->
+    <div class="clear"></div>
+  </ion-content>
+</ion-view>

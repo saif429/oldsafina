@@ -1,0 +1,19 @@
+<ion-view view-title="YOUTUBE">
+    <ion-content style="background-color: #eeeeee;">
+        <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+        <div class="clear" ng-init="getAllYoutube()"></div>
+        <input type = "search" class="searchbox" placeholder="Search" ng-model="searchyoutube" />
+        <div class="icon_center icon_margin"><i class="icon ion-ios-play-outline banner_icon"></i></div>
+        <!-- <div class="clear"></div> -->
+        <ion-list>
+            <ion-item class="item-remove-animate item-avatar item-icon-right articale_bg" ng-repeat="video in videos | filter:searchyoutube" type="item-text-wrap" href="#/tab/youtube/{{video.$$hashKey}}" ng-click="singlevideo(video)" style="margin-bottom: 3px;margin-left: 5px;margin-right: 5px;">
+                <img ng-src="{{video.snippet.thumbnails.default.url}}" err-src="{{myDefaultImage}}" class="artical_img_avt">
+                <h4 class="artical_title text_style" style="font-size: 14px;text-transform: uppercase;color:#000000"><b>{{video.snippet.title | ampersand}}</b></h4>
+                <h6 class="text_style">{{video.snippet.publishedAt | date}}</h6>
+                <h6 class="text_style" style="font-size: 12px;">{{video.snippet.description | short}}</h6>
+            </ion-item>
+        </ion-list>
+        <div class="less_more"><center style="font-size: 20px;color: #3a0d46;" ng-click="next_videos(next_token)" id="lode_more_bu"><b>Load More</b></center></div>
+            <div class="clear"></div>
+    </ion-content>
+</ion-view>
